@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QMetaObject>
+#include <QInputDialog>
+#include <QMessageBox>
 
 class TrainSearch;
 class TicketGenerator;
