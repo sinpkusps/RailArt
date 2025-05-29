@@ -1,0 +1,12 @@
+debug/achievementsystem.o
+debug/main.o
+debug/railart.o
+debug/ticketgenerator.o
+debug/trainsearch.o
+debug/tripmanager.o
+debug/qrc_resource.o
+debug/moc_achievementsystem.o
+debug/moc_railart.o
+debug/moc_ticketgenerator.o
+debug/moc_trainsearch.o
+debug/moc_tripmanager.o

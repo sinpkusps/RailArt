@@ -1,0 +1,12 @@
+release/achievementsystem.o
+release/main.o
+release/railart.o
+release/ticketgenerator.o
+release/trainsearch.o
+release/tripmanager.o
+release/qrc_resource.o
+release/moc_achievementsystem.o
+release/moc_railart.o
+release/moc_ticketgenerator.o
+release/moc_trainsearch.o
+release/moc_tripmanager.o
