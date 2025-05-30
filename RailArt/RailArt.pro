@@ -10,15 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     achievementsystem.cpp \
+    dataloader.cpp \
     main.cpp \
     railart.cpp \
+    searchresult.cpp \
     ticketgenerator.cpp \
     trainsearch.cpp \
     tripmanager.cpp
 
 HEADERS += \
     achievementsystem.h \
+    dataloader.h \
+    datamodel.h \
     railart.h \
+    searchresult.h \
     ticketgenerator.h \
     trainsearch.h \
     tripmanager.h
@@ -26,6 +31,7 @@ HEADERS += \
 FORMS += \
     achievementsystem.ui \
     railart.ui \
+    searchresult.ui \
     ticketgenerator.ui \
     trainsearch.ui \
     tripmanager.ui
@@ -37,3 +43,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources.qrc
+
+DISTFILES += \
+    resources/data/trains.csv

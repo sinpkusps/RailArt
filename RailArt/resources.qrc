@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>resources/ticket_background.jpg</file>
+        <file>resources/QR_Code.jpg</file>
+        <file>resources/data/trains.csv</file>
     </qresource>
 </RCC>

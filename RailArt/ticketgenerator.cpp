@@ -170,7 +170,7 @@ QPixmap TicketGenerator::generateQRCode(int size) {
     std::uniform_int_distribution<> dis(0, 2);
 
     QPixmap qrPixmap(size, size);
-    qrPixmap.fill(Qt::white); // 白色背景
+    qrPixmap.fill(Qt::white);
 
     QPainter painter(&qrPixmap);
     painter.setRenderHint(QPainter::Antialiasing);
@@ -191,8 +191,6 @@ QPixmap TicketGenerator::generateQRCode(int size) {
         }
     }
 
-
-    // 添加定位标记（增强真实感）
     painter.setPen(QPen(Qt::black, 2));
     painter.drawRect(0, 0, 7 * moduleSize, 7 * moduleSize);
     painter.drawRect(14 * moduleSize, 0, 7 * moduleSize, 7 * moduleSize);
