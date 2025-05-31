@@ -1,0 +1,20 @@
+[
+    {
+        "arrival": "上海虹桥",
+        "departure": "北京南",
+        "endTime": "2023-12-15T13:28:00",
+        "memo": "二等座，靠窗",
+        "price": 553.5,
+        "startTime": "2023-12-15T08:00:00",
+        "trainNumber": "G123"
+    },
+    {
+        "arrival": "重庆北",
+        "departure": "成都",
+        "endTime": "2023-12-18T04:20:00",
+        "memo": "硬卧中铺",
+        "price": 128,
+        "startTime": "2023-12-17T22:45:00",
+        "trainNumber": "K258"
+    }
+]

@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     railart.cpp \
     searchresult.cpp \
+    ticketadder.cpp \
     ticketgenerator.cpp \
     trainsearch.cpp \
     tripmanager.cpp
@@ -24,6 +25,8 @@ HEADERS += \
     datamodel.h \
     railart.h \
     searchresult.h \
+    ticketadder.h \
+    ticketdata.h \
     ticketgenerator.h \
     trainsearch.h \
     tripmanager.h
@@ -32,6 +35,7 @@ FORMS += \
     achievementsystem.ui \
     railart.ui \
     searchresult.ui \
+    ticketadder.ui \
     ticketgenerator.ui \
     trainsearch.ui \
     tripmanager.ui
@@ -45,4 +49,5 @@ RESOURCES += \
     resources.qrc
 
 DISTFILES += \
+    resources/data/tickets.json \
     resources/data/trains.csv

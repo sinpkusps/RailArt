@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TicketAdder</class>
+ <widget class="QDialog" name="TicketAdder">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>378</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>561</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="checihao">
+      <property name="text">
+       <string>车次号</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="TrainNum"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="chufazhan">
+      <property name="text">
+       <string>出发站</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="Departure"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="daodazhan">
+      <property name="text">
+       <string>到达站</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="Arrival"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="facheshijian">
+      <property name="text">
+       <string>发车时间</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QDateTimeEdit" name="setoutTime"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="daodashijian">
+      <property name="text">
+       <string>到达时间</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QDateTimeEdit" name="ArrivalTime"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="price">
+      <property name="text">
+       <string>票价</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="Price"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="memo">
+      <property name="text">
+       <string>备注</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="memoText"/>
+    </item>
+    <item row="7" column="1">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

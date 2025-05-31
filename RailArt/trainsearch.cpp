@@ -31,7 +31,6 @@ void TrainSearch::backButton_clicked() {
 void TrainSearch::searchButton_clicked() {
     QString from = ui->departure->text().trimmed();
     QString to = ui->arrival->text().trimmed();
-    bool directOnly = ui->zhida->isChecked();
 
     if(from.isEmpty() || to.isEmpty()) {
         QMessageBox::warning(this, "提示", "请输入出发地与目的地");
