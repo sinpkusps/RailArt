@@ -1,44 +1,63 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets sql
 
-CONFIG += c++17
+CONFIG += c++11
+RC_ICONS += app.ico
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
+# UID 329101171
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    achievementsystem.cpp \
-    dataloader.cpp \
+    admindialog.cpp \
+    config.cpp \
+    dbmanager.cpp \
+    invitationdialog.cpp \
+    logindialog.cpp \
     main.cpp \
-    railart.cpp \
-    searchresult.cpp \
-    ticketadder.cpp \
+    adminwindow.cpp \
+    goodsdialog.cpp \
+    purchasedialog.cpp \
+    rechargedialog.cpp \
+    recordationdialog.cpp \
+    runtime.cpp \
+    searchdialog.cpp \
     ticketgenerator.cpp \
-    trainsearch.cpp \
-    tripmanager.cpp
+    userdialog.cpp \
+    userwindow.cpp
 
 HEADERS += \
-    achievementsystem.h \
-    dataloader.h \
-    datamodel.h \
-    railart.h \
-    searchresult.h \
-    ticketadder.h \
-    ticketdata.h \
+    admindialog.h \
+    adminwindow.h \
+    config.h \
+    dbmanager.h \
+    invitationdialog.h \
+    logindialog.h \
+    goodsdialog.h \
+    purchasedialog.h \
+    rechargedialog.h \
+    recordationdialog.h \
+    runtime.h \
+    searchdialog.h \
     ticketgenerator.h \
-    trainsearch.h \
-    tripmanager.h
+    userdialog.h \
+    userwindow.h
 
 FORMS += \
-    achievementsystem.ui \
-    railart.ui \
-    searchresult.ui \
-    ticketadder.ui \
+    admindialog.ui \
+    adminwindow.ui \
+    invitationdialog.ui \
+    logindialog.ui \
+    goodsdialog.ui \
+    purchasedialog.ui \
+    rechargedialog.ui \
+    recordationdialog.ui \
+    searchdialog.ui \
     ticketgenerator.ui \
-    trainsearch.ui \
-    tripmanager.ui
+    userdialog.ui \
+    userwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -46,8 +65,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resources.qrc
+    rc.qrc
 
-DISTFILES += \
-    resources/data/tickets.json \
-    resources/data/trains.csv
+DESTDIR=$$PWD/bin

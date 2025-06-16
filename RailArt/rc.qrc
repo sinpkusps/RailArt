@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/style1.qss</file>
+        <file>qss/style2.qss</file>
+        <file>qss/style3.qss</file>
+        <file>qss/style4.qss</file>
+        <file>qss/style5.qss</file>
+        <file>qss/style6.qss</file>
+        <file>qss/style7.qss</file>
+        <file>qss/style8.qss</file>
+        <file>qss/style9.qss</file>
+        <file>resources/button_for_ticketgenerator.jpg</file>
+        <file>resources/QR.jpg</file>
+        <file>resources/QR_Code.jpg</file>
+        <file>resources/ticket_background.jpg</file>
+        <file>resources/train_head.jpg</file>
+        <file>resources/train_tail.jpg</file>
+        <file>bg.jpg</file>
+    </qresource>
+</RCC>

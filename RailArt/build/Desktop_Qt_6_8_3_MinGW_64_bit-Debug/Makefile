@@ -33,7 +33,7 @@ IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = RailArt_resource_res.o
 SED           = $(QMAKE) -install sed
 MOVE          = move
 SUBTARGETS    =  \
@@ -279,7 +279,7 @@ Makefile: ../../RailArt.pro G:/Qt/6.8.3/mingw_64/mkspecs/win32-g++/qmake.conf G:
 		G:/Qt/6.8.3/mingw_64/mkspecs/features/qt_config.prf \
 		G:/Qt/6.8.3/mingw_64/mkspecs/win32-g++/qmake.conf \
 		G:/Qt/6.8.3/mingw_64/mkspecs/features/spec_post.prf \
-		../.qmake.stash \
+		.qmake.stash \
 		G:/Qt/6.8.3/mingw_64/mkspecs/features/exclusive_builds.prf \
 		G:/Qt/6.8.3/mingw_64/mkspecs/features/toolchain.prf \
 		G:/Qt/6.8.3/mingw_64/mkspecs/features/default_pre.prf \
@@ -307,10 +307,11 @@ Makefile: ../../RailArt.pro G:/Qt/6.8.3/mingw_64/mkspecs/win32-g++/qmake.conf G:
 		../../RailArt.pro \
 		G:/Qt/6.8.3/mingw_64/lib/Qt6Widgets.prl \
 		G:/Qt/6.8.3/mingw_64/lib/Qt6Gui.prl \
+		G:/Qt/6.8.3/mingw_64/lib/Qt6Sql.prl \
 		G:/Qt/6.8.3/mingw_64/lib/Qt6Core.prl \
 		G:/Qt/6.8.3/mingw_64/lib/Qt6EntryPoint.prl \
 		G:/Qt/6.8.3/mingw_64/mkspecs/features/build_pass.prf \
-		../../resource.qrc
+		../../rc.qrc
 	$(QMAKE) -o Makefile ..\..\RailArt.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 G:/Qt/6.8.3/mingw_64/mkspecs/features/spec_pre.prf:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/device_config.prf:
@@ -521,7 +522,7 @@ G:/Qt/6.8.3/mingw_64/mkspecs/features/qt_functions.prf:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/qt_config.prf:
 G:/Qt/6.8.3/mingw_64/mkspecs/win32-g++/qmake.conf:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/spec_post.prf:
-../.qmake.stash:
+.qmake.stash:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/exclusive_builds.prf:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/toolchain.prf:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/default_pre.prf:
@@ -549,10 +550,11 @@ G:/Qt/6.8.3/mingw_64/mkspecs/features/lex.prf:
 ../../RailArt.pro:
 G:/Qt/6.8.3/mingw_64/lib/Qt6Widgets.prl:
 G:/Qt/6.8.3/mingw_64/lib/Qt6Gui.prl:
+G:/Qt/6.8.3/mingw_64/lib/Qt6Sql.prl:
 G:/Qt/6.8.3/mingw_64/lib/Qt6Core.prl:
 G:/Qt/6.8.3/mingw_64/lib/Qt6EntryPoint.prl:
 G:/Qt/6.8.3/mingw_64/mkspecs/features/build_pass.prf:
-../../resource.qrc:
+../../rc.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\RailArt.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 
@@ -563,6 +565,7 @@ all: debug-all release-all  FORCE
 clean: debug-clean release-clean  FORCE
 distclean: debug-distclean release-distclean  FORCE
 	-$(DEL_FILE) Makefile
+	-$(DEL_FILE) .qmake.stash
 
 debug-mocclean:
 	$(MAKE) -f $(MAKEFILE).Debug mocclean

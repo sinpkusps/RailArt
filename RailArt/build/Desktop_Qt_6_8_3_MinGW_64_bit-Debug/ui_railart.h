@@ -23,7 +23,6 @@ class Ui_RailArt
 {
 public:
     QWidget *centralwidget;
-    QPushButton *btnAchievementSystem;
     QPushButton *btnTicketGenerator;
     QPushButton *btnTrainSearch;
     QPushButton *btnTripManager;
@@ -34,28 +33,91 @@ public:
     {
         if (RailArt->objectName().isEmpty())
             RailArt->setObjectName("RailArt");
-        RailArt->resize(426, 279);
+        RailArt->resize(800, 600);
         RailArt->setMinimumSize(QSize(200, 200));
         RailArt->setMaximumSize(QSize(800, 800));
+        RailArt->setStyleSheet(QString::fromUtf8("QWidget#centralwidget {\n"
+"border-image: url(:/resources/zhu.jpg) 0 0 0 0 stretch stretch;\n"
+"}"));
         centralwidget = new QWidget(RailArt);
         centralwidget->setObjectName("centralwidget");
-        btnAchievementSystem = new QPushButton(centralwidget);
-        btnAchievementSystem->setObjectName("btnAchievementSystem");
-        btnAchievementSystem->setGeometry(QRect(260, 180, 100, 50));
         btnTicketGenerator = new QPushButton(centralwidget);
         btnTicketGenerator->setObjectName("btnTicketGenerator");
-        btnTicketGenerator->setGeometry(QRect(260, 110, 100, 50));
+        btnTicketGenerator->setGeometry(QRect(460, -10, 200, 280));
+        btnTicketGenerator->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"	font: 20pt \"Kunstler Script\";\n"
+"\n"
+"	color: rgb(131, 133, 170);\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"color: rgb(131, 133, 170);\n"
+"font: 20pt \"Kunstler Script\";\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:pressed {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"	font: 20pt \"Kunstler Script\";\n"
+"color: rgb(131, 133, 170);\n"
+"\n"
+"}"));
         btnTrainSearch = new QPushButton(centralwidget);
         btnTrainSearch->setObjectName("btnTrainSearch");
-        btnTrainSearch->setGeometry(QRect(60, 110, 100, 50));
+        btnTrainSearch->setGeometry(QRect(200, -80, 200, 280));
+        btnTrainSearch->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"	font: 20pt \"Kunstler Script\";\n"
+"\n"
+"	color: rgb(131, 133, 170);\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"color: rgb(131, 133, 170);\n"
+"font: 20pt \"Kunstler Script\";\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:pressed {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"	font: 20pt \"Kunstler Script\";\n"
+"color: rgb(131, 133, 170);\n"
+"\n"
+"}"));
         btnTripManager = new QPushButton(centralwidget);
         btnTripManager->setObjectName("btnTripManager");
-        btnTripManager->setGeometry(QRect(60, 180, 100, 50));
+        btnTripManager->setGeometry(QRect(0, 0, 200, 280));
+        btnTripManager->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"	font: 20pt \"Kunstler Script\";\n"
+"\n"
+"	color: rgb(131, 133, 170);\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"color: rgb(131, 133, 170);\n"
+"font: 20pt \"Kunstler Script\";\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:pressed {\n"
+"border-image: url(:/resources/baiyu1.jpg) 0 0 0 0 stretch stretch;\n"
+"	font: 20pt \"Kunstler Script\";\n"
+"color: rgb(131, 133, 170);\n"
+"\n"
+"}"));
         RailArt->setCentralWidget(centralwidget);
         MainRailArt = new QMenuBar(RailArt);
         MainRailArt->setObjectName("MainRailArt");
         MainRailArt->setEnabled(true);
-        MainRailArt->setGeometry(QRect(0, 0, 426, 18));
+        MainRailArt->setGeometry(QRect(0, 0, 800, 18));
         RailArt->setMenuBar(MainRailArt);
         statusbar = new QStatusBar(RailArt);
         statusbar->setObjectName("statusbar");
@@ -69,7 +131,6 @@ public:
     void retranslateUi(QMainWindow *RailArt)
     {
         RailArt->setWindowTitle(QCoreApplication::translate("RailArt", "RailArt", nullptr));
-        btnAchievementSystem->setText(QCoreApplication::translate("RailArt", "\346\210\220\345\260\261\347\263\273\347\273\237", nullptr));
         btnTicketGenerator->setText(QCoreApplication::translate("RailArt", "\350\275\246\347\245\250\347\224\237\346\210\220", nullptr));
         btnTrainSearch->setText(QCoreApplication::translate("RailArt", "\350\275\246\346\254\241\346\237\245\350\257\242", nullptr));
         btnTripManager->setText(QCoreApplication::translate("RailArt", "\350\241\214\347\250\213\347\256\241\347\220\206", nullptr));
