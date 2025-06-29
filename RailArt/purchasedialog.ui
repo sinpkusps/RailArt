@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PurchaseDialog</class>
+ <widget class="QDialog" name="PurchaseDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>280</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>购票</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#PurchaseDialog {
+border-image: url(:/resources/7.jpg) 0 0 0 0 stretch stretch;}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>6</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="6" column="1">
+      <widget class="QSpinBox" name="spinBoxQuantity"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>车次编号</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QSpinBox" name="spinBoxResidue">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>购票数量</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEditPrice">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEditStartCity">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEditID">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>余票数量</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>车次名称</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEditName">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1" colspan="2">
+      <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 16pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+       </property>
+       <property name="text">
+        <string>加入待支付订单</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>车次票价</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEditEndCity">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>起点城市</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>终点城市</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>7</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="1">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditID</tabstop>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>lineEditStartCity</tabstop>
+  <tabstop>lineEditEndCity</tabstop>
+  <tabstop>lineEditPrice</tabstop>
+  <tabstop>spinBoxResidue</tabstop>
+  <tabstop>spinBoxQuantity</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

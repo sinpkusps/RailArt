@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GoodsDialog</class>
+ <widget class="QDialog" name="GoodsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>451</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>车次信息</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#GoodsDialog
+{
+  border-image:url(&quot;://bg.jpg&quot;);
+}
+
+#labelImg
+{
+  background-color: rgba(0, 0, 0, 40%);
+}
+
+QLineEdit
+{  
+   background-color: rgba(255, 255, 224, 50%);
+}
+
+QComboBox
+{  
+   background-color: rgba(255, 255, 224, 50%);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabGoods">
+      <property name="styleSheet">
+       <string notr="true">QWidget#tabGoods{
+border-image: url(:/resources/1.jpg) 0 0 0 0 stretch stretch;
+}</string>
+      </property>
+      <attribute name="title">
+       <string>车次信息</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>车次序列号</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2" colspan="2">
+        <widget class="QLineEdit" name="lineEditStartCity">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" colspan="2">
+        <widget class="QLineEdit" name="lineEditName">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="label_8">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>起点城市</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2" colspan="2">
+        <widget class="QLineEdit" name="lineEditEndCity">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="10">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="minimumSize">
+          <size>
+           <width>220</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>图片</string>
+         </property>
+         <widget class="QLabel" name="labelImg">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>22</y>
+            <width>200</width>
+            <height>300</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>600</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <bold>false</bold>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::Box</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButtonImage">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>328</y>
+            <width>80</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string>上传图片</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLabel" name="label_7">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>票价</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>车次名称</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2" colspan="2">
+        <widget class="QDateTimeEdit" name="dateTimeEditStart"/>
+       </item>
+       <item row="2" column="2" colspan="2">
+        <widget class="QLineEdit" name="lineEditOwnerID">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="3">
+        <widget class="QPushButton" name="pushButtonCommit">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+         </property>
+         <property name="text">
+          <string>确定</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxPrice"/>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLabel" name="label_5">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>总票数</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="label_6">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>发车时间</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1" colspan="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>147</width>
+           <height>37</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="8" column="2">
+        <widget class="QSpinBox" name="spinBoxCount"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>发布者账号</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="label_9">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>终点城市</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" colspan="2">
+        <widget class="QLineEdit" name="lineEditID">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2" colspan="2">
+        <widget class="QDateTimeEdit" name="dateTimeEditEnd"/>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(1, 132, 255);</string>
+         </property>
+         <property name="text">
+          <string>到达时间</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>lineEditID</zorder>
+      <zorder>label</zorder>
+      <zorder>lineEditStartCity</zorder>
+      <zorder>lineEditName</zorder>
+      <zorder>label_8</zorder>
+      <zorder>lineEditEndCity</zorder>
+      <zorder>groupBox</zorder>
+      <zorder>label_7</zorder>
+      <zorder>label_3</zorder>
+      <zorder>dateTimeEditStart</zorder>
+      <zorder>lineEditOwnerID</zorder>
+      <zorder>pushButtonCommit</zorder>
+      <zorder>doubleSpinBoxPrice</zorder>
+      <zorder>label_5</zorder>
+      <zorder>label_6</zorder>
+      <zorder>spinBoxCount</zorder>
+      <zorder>label_4</zorder>
+      <zorder>label_9</zorder>
+      <zorder>dateTimeEditEnd</zorder>
+      <zorder>label_2</zorder>
+     </widget>
+     <widget class="QWidget" name="tabForum">
+      <property name="styleSheet">
+       <string notr="true">QWidget#tabForum{
+border-image: url(:/resources/11.jpg) 0 0 0 0 stretch stretch;
+}</string>
+      </property>
+      <attribute name="title">
+       <string>评论</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0" colspan="2">
+        <widget class="QTextEdit" name="textEditMessage">
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+    background-color: transparent;
+    border: 1px solid transparent;  
+    outline: none;               
+}
+
+
+QTextEdit::viewport {
+    background-color: transparent;
+}
+
+
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    background-color: transparent;
+}
+
+
+QTextEdit::content {
+    background-color: transparent;
+}
+
+
+QTextEdit {
+    margin: 0;
+    padding: 0;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="lineEditMessage"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButtonMessage">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+         </property>
+         <property name="text">
+          <string>发布</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>pushButtonImage</tabstop>
+  <tabstop>lineEditID</tabstop>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>lineEditOwnerID</tabstop>
+  <tabstop>lineEditStartCity</tabstop>
+  <tabstop>lineEditEndCity</tabstop>
+  <tabstop>dateTimeEditStart</tabstop>
+  <tabstop>dateTimeEditEnd</tabstop>
+  <tabstop>doubleSpinBoxPrice</tabstop>
+  <tabstop>spinBoxCount</tabstop>
+  <tabstop>pushButtonCommit</tabstop>
+  <tabstop>textEditMessage</tabstop>
+  <tabstop>lineEditMessage</tabstop>
+  <tabstop>pushButtonMessage</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

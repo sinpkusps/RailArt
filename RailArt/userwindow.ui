@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserWindow</class>
+ <widget class="QMainWindow" name="UserWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1344</width>
+    <height>880</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#tabCart{
+border-image: url(:/resources/22.jpg) 0 0 0 0 stretch stretch;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">QWidget#tabGoods{
+border-image: url(:/resources/37.jpg) 0 0 0 0 stretch stretch;
+}</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::TabPosition::West</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabGoods">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabGoods{
+border-image: url(:/resources/41.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>所有车次</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayoutGoods">
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButtonGoodsRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButtonGoodsCart">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>加入待支付订单</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButtonGoodsSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerGoods">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>975</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTableView" name="tableViewGoods">
+          <property name="styleSheet">
+           <string notr="true">QTableView#tableViewGoods{
+border-image: url(:/resources/37.jpg) 0 0 0 0 stretch stretch;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabCart">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabCart{
+border-image: url(:/resources/50.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>待支付订单</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerRecordation_2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>1022</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButtonCartPay">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string>付款</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButtonCartRemove">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string> 移除</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pushButtonCartRefresh">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string>刷新</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QTableView" name="tableViewCart">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabRecordation">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabRecordation{
+border-image: url(:/resources/37.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>行程记录</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="2">
+         <layout class="QGridLayout" name="gridLayoutRecordation">
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButtonGoodsReturn">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>退票</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButtonRecordationSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="pushButtonRecordationRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButtonShoucang">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>收藏</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerRecordation">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>975</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QTableView" name="tableViewRecordation">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabshoucang">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabshoucang{
+border-image: url(:/resources/37.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>收藏与记录</string>
+       </attribute>
+       <widget class="QTableView" name="tableViewShoucang">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>1291</width>
+          <height>761</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButto_update">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>93</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+        </property>
+        <property name="text">
+         <string>刷新</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButto_create">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>10</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+        </property>
+        <property name="text">
+         <string>生成车票</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tabInvitation">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabInvitation{
+border-image: url(:/resources/42.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>反馈信息</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerBook_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>1108</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButtonInvitationAdd">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string> 上报反馈</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButtonInvitationRefresh">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string>刷新</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QTableView" name="tableViewInvitation">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMyGoods">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabMyGoods{
+border-image: url(:/resources/43.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>我的车次</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButtonMyGoodsAdd">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>添加</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonMyGoodsRemove">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>删除</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonMyGoodsSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonMyGoodsRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <spacer name="horizontalSpacerGoods_2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>1299</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QTableView" name="tableViewMyGoods">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1344</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="actionAccount"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAccount">
+   <property name="text">
+    <string>账户信息(&amp;U)</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>退出(&amp;Q)</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>pushButtonGoodsCart</tabstop>
+  <tabstop>pushButtonGoodsSearch</tabstop>
+  <tabstop>pushButtonGoodsRefresh</tabstop>
+  <tabstop>tableViewGoods</tabstop>
+  <tabstop>pushButtonRecordationRefresh</tabstop>
+  <tabstop>pushButtonRecordationSearch</tabstop>
+  <tabstop>tableViewRecordation</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminWindow</class>
+ <widget class="QMainWindow" name="AdminWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>858</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tabUser">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabUser{
+border-image: url(:/resources/3.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>用户信息</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerUser">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>975</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayoutUser">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButtonUserAdd">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>添加</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButtonUserRemove">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>删除</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButtonUserSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="pushButtonUserRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTableView" name="tableViewUser">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    background-color: transparent;  /* 主背景透明 */
+    border: none;                   /* 移除边框 */
+    outline: none;                  /* 移除焦点虚线框 */
+}
+
+QTableView::viewport {             /* 内容视口区域 */
+    background-color: transparent;
+}
+
+/* 可选：处理表头背景 */
+QHeaderView {
+    background-color: transparent;
+}
+
+/* 可选：处理单元格背景 */
+QTableView::item {
+    background-color: transparent;
+}
+
+/* 可选：隐藏默认网格线 */
+QTableView {
+    gridline-color: transparent;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabRecordation">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabRecordation{
+border-image: url(:/resources/3.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>订单记录</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerRecordation">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>975</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayoutRecordation">
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButtonRecordationRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButtonRecordationSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTableView" name="tableViewRecordation">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    background-color: transparent;  /* 主背景透明 */
+    border: none;                   /* 移除边框 */
+    outline: none;                  /* 移除焦点虚线框 */
+}
+
+QTableView::viewport {             /* 内容视口区域 */
+    background-color: transparent;
+}
+
+/* 可选：处理表头背景 */
+QHeaderView {
+    background-color: transparent;
+}
+
+/* 可选：处理单元格背景 */
+QTableView::item {
+    background-color: transparent;
+}
+
+/* 可选：隐藏默认网格线 */
+QTableView {
+    gridline-color: transparent;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabGoods">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabGoods{
+border-image: url(:/resources/3.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>所有车次</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerGoods">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>975</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayoutGoods">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButtonGoodsAdd">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>添加</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButtonGoodsRemove">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>删除</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButtonGoodsSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="pushButtonGoodsRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTableView" name="tableViewGoods">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    background-color: transparent;  
+    border: none;                   
+    outline: none;                  
+}
+
+QTableView::viewport {            
+    background-color: transparent;
+}
+
+
+QHeaderView {
+    background-color: transparent;
+}
+
+
+QTableView::item {
+    background-color: transparent;
+}
+
+
+QTableView {
+    gridline-color: transparent;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabStatistics">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabStatistics{
+border-image: url(:/resources/3.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>售票统计</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>1147</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButtonStatisticsSearch">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonStatisticsRefresh">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTableView" name="tableViewStatistics">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    background-color: transparent;  /* 主背景透明 */
+    border: none;                   /* 移除边框 */
+    outline: none;                  /* 移除焦点虚线框 */
+}
+
+QTableView::viewport {             /* 内容视口区域 */
+    background-color: transparent;
+}
+
+/* 可选：处理表头背景 */
+QHeaderView {
+    background-color: transparent;
+}
+
+/* 可选：处理单元格背景 */
+QTableView::item {
+    background-color: transparent;
+}
+
+/* 可选：隐藏默认网格线 */
+QTableView {
+    gridline-color: transparent;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabInvitation">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tabInvitation{
+border-image: url(:/resources/3.jpg) 0 0 0 0 stretch stretch;
+}</string>
+       </property>
+       <attribute name="title">
+        <string>反馈信息</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacerBook_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>1235</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButtonInvitationRefresh">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+          </property>
+          <property name="text">
+           <string>刷新</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTableView" name="tableViewInvitation">
+          <property name="styleSheet">
+           <string notr="true">QTableView {
+    background-color: transparent;  /* 主背景透明 */
+    border: none;                   /* 移除边框 */
+    outline: none;                  /* 移除焦点虚线框 */
+}
+
+QTableView::viewport {             /* 内容视口区域 */
+    background-color: transparent;
+}
+
+/* 可选：处理表头背景 */
+QHeaderView {
+    background-color: transparent;
+}
+
+/* 可选：处理单元格背景 */
+QTableView::item {
+    background-color: transparent;
+}
+
+/* 可选：隐藏默认网格线 */
+QTableView {
+    gridline-color: transparent;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="actionAccount"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAccount">
+   <property name="text">
+    <string>账户信息(&amp;U)</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>退出(&amp;Q)</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

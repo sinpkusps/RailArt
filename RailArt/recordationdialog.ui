@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecordationDialog</class>
+ <widget class="QDialog" name="RecordationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>订单详情</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#RecordationDialog {
+border-image: url(:/resources/17.jpg) 0 0 0 0 stretch stretch;}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" rowspan="2">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>流水号</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" rowspan="2">
+      <widget class="QLineEdit" name="lineEditID">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>状态</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" colspan="2">
+      <widget class="QLineEdit" name="lineEditStatus">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>消费金额</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLineEdit" name="lineEditMoney">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" rowspan="2">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>姓名</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" rowspan="2" colspan="2">
+      <widget class="QLineEdit" name="lineEditUserName">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>账号</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEditUserID">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>购票时间</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEditStartTime">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2" colspan="2">
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(35, 226, 255);</string>
+       </property>
+       <property name="text">
+        <string>退票时间</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4" colspan="2">
+      <widget class="QLineEdit" name="lineEditEndTime">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="6">
+      <widget class="QPushButton" name="recshoucang">
+       <property name="styleSheet">
+        <string notr="true">qproperty-alignment: AlignCenter;  
+color: rgb(255, 55, 255);</string>
+       </property>
+       <property name="text">
+        <string>收藏</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>424</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QTableView" name="tableViewItem">
+     <property name="minimumSize">
+      <size>
+       <width>1000</width>
+       <height>300</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditID</tabstop>
+  <tabstop>lineEditStatus</tabstop>
+  <tabstop>lineEditMoney</tabstop>
+  <tabstop>lineEditUserID</tabstop>
+  <tabstop>lineEditUserName</tabstop>
+  <tabstop>lineEditStartTime</tabstop>
+  <tabstop>tableViewItem</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

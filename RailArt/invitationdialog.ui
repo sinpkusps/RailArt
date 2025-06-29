@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InvitationDialog</class>
+ <widget class="QDialog" name="InvitationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>421</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>反馈信息</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#InvitationDialog {
+border-image: url(:/resources/1.jpg) 0 0 0 0 stretch stretch;}
+
+#labelImg
+{
+  background-color: rgba(0, 0, 0, 40%);
+}
+
+QLineEdit
+{  
+   background-color: rgba(255, 255, 224, 50%);
+}
+
+QComboBox
+{  
+   background-color: rgba(255, 255, 224, 50%);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabInvitation">
+      <property name="styleSheet">
+       <string notr="true">QWidget#tabInvitation{
+border-image: url(:/resources/13.jpg) 0 0 0 0 stretch stretch;
+}</string>
+      </property>
+      <attribute name="title">
+       <string>反馈信息</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(111, 243, 255);
+qproperty-alignment: AlignCenter;  </string>
+         </property>
+         <property name="text">
+          <string>标题</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1" colspan="4">
+        <widget class="QTextEdit" name="textEditSummary"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(111, 243, 255);
+qproperty-alignment: AlignCenter;  </string>
+         </property>
+         <property name="text">
+          <string>发布者账号</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>内容</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QComboBox" name="comboBoxStatus"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDateTimeEdit" name="dateTimeEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(111, 243, 255);</string>
+         </property>
+         <property name="text">
+          <string> 日期</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(111, 243, 255);
+qproperty-alignment: AlignCenter;  </string>
+         </property>
+         <property name="text">
+          <string>反馈登记号</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="4">
+        <widget class="QPushButton" name="pushButtonCommit">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+         </property>
+         <property name="text">
+          <string>确定</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">qproperty-alignment: AlignCenter;  color: rgb(255, 255, 255);
+background-color: rgb(111, 243, 255);</string>
+         </property>
+         <property name="text">
+          <string>状态</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="4">
+        <widget class="QLineEdit" name="lineEditID">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="4">
+        <widget class="QLineEdit" name="lineEditName">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="4">
+        <widget class="QLineEdit" name="lineEditOwnerID">
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabForum">
+      <property name="styleSheet">
+       <string notr="true">QWidget#tabForum{
+border-image: url(:/resources/15.jpg) 0 0 0 0 stretch stretch;
+}</string>
+      </property>
+      <attribute name="title">
+       <string>评论</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0" colspan="2">
+        <widget class="QTextEdit" name="textEditMessage">
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+    background-color: transparent;
+    border: 1px solid transparent;  
+    outline: none;               
+}
+
+
+QTextEdit::viewport {
+    background-color: transparent;
+}
+
+
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    background-color: transparent;
+}
+
+
+QTextEdit::content {
+    background-color: transparent;
+}
+
+
+QTextEdit {
+    margin: 0;
+    padding: 0;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="lineEditMessage"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButtonMessage">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}
+
+
+QPushButton:hover {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+
+font: 8pt &quot;Kunstler Script&quot;;
+}
+
+
+QPushButton:pressed {
+border-image: url(:/resources/a1.jpg) 0 0 0 0 stretch stretch;
+	font: 20pt &quot;Kunstler Script&quot;;
+
+
+}</string>
+         </property>
+         <property name="text">
+          <string>发布</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditID</tabstop>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>lineEditOwnerID</tabstop>
+  <tabstop>dateTimeEdit</tabstop>
+  <tabstop>comboBoxStatus</tabstop>
+  <tabstop>textEditSummary</tabstop>
+  <tabstop>pushButtonCommit</tabstop>
+  <tabstop>textEditMessage</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pushButtonMessage</tabstop>
+  <tabstop>lineEditMessage</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
